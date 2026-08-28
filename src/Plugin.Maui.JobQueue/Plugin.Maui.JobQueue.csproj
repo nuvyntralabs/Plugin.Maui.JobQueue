@@ -20,9 +20,9 @@
     <PackageId>Plugin.Maui.JobQueue</PackageId>
     <Title>.NET MAUI JobQueue — durable SQLite jobs with retry</Title>
     <Description>Durable SQLite job queue for .NET MAUI on iOS and Android. Enqueue typed jobs, persist them across process death, retry with backoff, and dead-letter failures. Built for offline-first enterprise apps — not OS background scheduling.</Description>
-    <PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;nugetworld;job-queue;durable;sqlite;offline-first;retry;backoff;dead-letter;hangfire;background-work</PackageTags>
+    <PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;mauiessentials;job-queue;durable;sqlite;offline-first;retry;backoff;dead-letter;hangfire;background-work</PackageTags>
     <Authors>Niladri</Authors>
-    <Company>NugetWorld</Company>
+    <Company>MauiEssentials</Company>
     <Copyright>Copyright © 2026 Niladri</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
