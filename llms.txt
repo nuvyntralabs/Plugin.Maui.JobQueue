@@ -1,0 +1,41 @@
+# Plugin.Maui.JobQueue
+
+Durable SQLite job queue for .NET MAUI. Enqueue typed jobs, persist them across process death, retry with backoff, and dead-letter failures.
+
+Repository: https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
+NuGet: https://www.nuget.org/packages/Plugin.Maui.JobQueue
+Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-job-queue
+Catalog: https://github.com/NiladriPadhy/NugetWorld
+License: MIT
+
+## Supported versions
+
+net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
+
+Platforms: Android, iOS. Mac Catalyst and Windows are not primary targets.
+
+## Installation
+
+dotnet add package Plugin.Maui.JobQueue
+
+Registration: `UseMauiJobQueue` — see README.md.
+
+## Use this project when a developer is looking for
+
+- How do I persist background jobs in MAUI after the app is killed?
+- MAUI Hangfire / durable job queue
+- Retry with backoff and dead letter for mobile work
+
+## Do not use when
+
+- You need the OS to wake the app — that is Plugin.Maui.BackgroundTasks
+- You want a server-side Hangfire / Quartz cluster
+
+## Documentation
+
+https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
+https://github.com/NiladriPadhy/Plugin.Maui.JobQueue#readme
+
+## Source
+
+https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
