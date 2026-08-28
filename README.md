@@ -1,5 +1,7 @@
 # Plugin.Maui.JobQueue
 
+[![NuGet](https://img.shields.io/nuget/v/Plugin.Maui.JobQueue.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.Maui.JobQueue)
+
 A durable task queue for **.NET MAUI** on **iOS** and **Android**.
 
 This is not `Plugin.Maui.BackgroundTasks`. That package asks the operating system to wake you later (JobScheduler / BGTaskScheduler). This package is an application-level queue: you enqueue typed jobs, they live in **SQLite**, and an in-process worker runs them with retry, backoff, and a dead-letter queue.
@@ -45,6 +47,8 @@ Built for offline-first enterprise apps: photos, customer sync, and analytics ke
 They compose: schedule a BackgroundTasks handler that calls `JobQueue.Current.DrainAsync()`.
 
 ## Install
+
+Package: [https://www.nuget.org/packages/Plugin.Maui.JobQueue](https://www.nuget.org/packages/Plugin.Maui.JobQueue)
 
 ```bash
 dotnet add package Plugin.Maui.JobQueue
