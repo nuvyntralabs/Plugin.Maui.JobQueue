@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.Maui.JobQueue.Sample.MainPage"
+             Title="Durable job queue">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10">
+            <Label Text="Plugin.Maui.JobQueue" FontSize="22" FontAttributes="Bold" />
+            <Label Text="SQLite → Worker → Success / Retry / Dead letter"
+                   TextColor="Gray" />
+
+            <Label x:Name="SnapshotLabel" FontSize="13" LineBreakMode="WordWrap" />
+
+            <Label Text="Enqueue" FontAttributes="Bold" Margin="0,8,0,0" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Photo" Clicked="OnPhotoClicked" />
+                <Button Text="Customer" Clicked="OnCustomerClicked" />
+                <Button Text="Analytics" Clicked="OnAnalyticsClicked" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Flaky (retries)" Clicked="OnFlakyClicked" />
+                <Button Text="Poison (dead letter)" Clicked="OnPoisonClicked" />
+            </HorizontalStackLayout>
+
+            <Label Text="Queue" FontAttributes="Bold" Margin="0,8,0,0" />
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Drain now" Clicked="OnDrainClicked" />
+                <Button Text="Replay dead letters" Clicked="OnReplayClicked" />
+            </HorizontalStackLayout>
+
+            <Label Text="Jobs" FontAttributes="Bold" Margin="0,12,0,0" />
+            <Label x:Name="JobsLabel" FontFamily="Courier New" FontSize="12" LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
