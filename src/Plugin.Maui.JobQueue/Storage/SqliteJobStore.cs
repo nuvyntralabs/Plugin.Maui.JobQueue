@@ -151,7 +151,15 @@ public sealed class SqliteJobStore : IJobStore
     public async Task UpdateAsync(JobRecord record, CancellationToken cancellationToken = default)
     {
         var db = await GetDbAsync(cancellationToken).ConfigureAwait(false);
-        await db.InsertOrReplaceAsync(JobRow.FromRecord(record)).ConfigureAwait(false);
+        await _gate.WaitAsync(cancellationToken).ConfigureAwait(false);
+        try
+        {
+            await db.UpdateAsync(JobRow.FromRecord(record)).ConfigureAwait(false);
+        }
+        finally
+        {
+            _gate.Release();
+        }
     }
 
     public async Task DeleteAsync(string id, CancellationToken cancellationToken = default)

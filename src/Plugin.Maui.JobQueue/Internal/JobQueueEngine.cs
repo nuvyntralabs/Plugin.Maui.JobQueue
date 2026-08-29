@@ -237,7 +237,9 @@ sealed class JobQueueEngine : IJobQueue, IAsyncDisposable
                 return;
             }
 
-            _workerCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+            // Do not link workers to the StartAsync token — hosts cancel that
+            // token when startup finishes, which would silently kill the queue.
+            _workerCts = new CancellationTokenSource();
             var token = _workerCts.Token;
             var count = Math.Max(1, _options.WorkerCount);
             _workers = Enumerable.Range(0, count)
@@ -302,8 +304,9 @@ sealed class JobQueueEngine : IJobQueue, IAsyncDisposable
             {
                 break;
             }
-            catch
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine($"JobQueue worker error: {ex}");
                 try
                 {
                     await Task.Delay(_options.PollInterval, cancellationToken).ConfigureAwait(false);
@@ -343,6 +346,12 @@ sealed class JobQueueEngine : IJobQueue, IAsyncDisposable
             }
 
             await dispatcher.ExecuteAsync(record.PayloadJson, context, _services, cancellationToken).ConfigureAwait(false);
+            var after = await _store.FindByIdAsync(record.Id, CancellationToken.None).ConfigureAwait(false);
+            if (after is null || after.Status == JobStatus.Cancelled)
+            {
+                return;
+            }
+
             await CompleteSuccessAsync(record, started).ConfigureAwait(false);
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
