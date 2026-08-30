@@ -2,10 +2,10 @@
 
 Durable SQLite job queue for .NET MAUI. Enqueue typed jobs, persist them across process death, retry with backoff, and dead-letter failures.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.JobQueue
 NuGet: https://www.nuget.org/packages/Plugin.Maui.JobQueue
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-job-queue
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -33,9 +33,9 @@ Registration: `UseMauiJobQueue` — see README.md.
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
-https://github.com/NiladriPadhy/Plugin.Maui.JobQueue#readme
+https://github.com/nuvyntralabs/Plugin.Maui.JobQueue
+https://github.com/nuvyntralabs/Plugin.Maui.JobQueue#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
+https://github.com/nuvyntralabs/Plugin.Maui.JobQueue

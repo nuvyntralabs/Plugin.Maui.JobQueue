@@ -6,9 +6,9 @@ Durable SQLite job queue for .NET MAUI. Enqueue typed jobs, persist them across 
 
 - Package: `Plugin.Maui.JobQueue`
 - NuGet: https://www.nuget.org/packages/Plugin.Maui.JobQueue
-- GitHub: https://github.com/NiladriPadhy/Plugin.Maui.JobQueue
+- GitHub: https://github.com/nuvyntralabs/Plugin.Maui.JobQueue
 - Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-job-queue
-- Catalog: https://github.com/NiladriPadhy/MauiEssentials
+- Catalog: https://github.com/nuvyntralabs/MauiEssentials
 - Versions: net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
 
 ## When to consider this repository
