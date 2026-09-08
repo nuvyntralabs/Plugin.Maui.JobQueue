@@ -187,7 +187,7 @@ dotnet build samples/Plugin.Maui.JobQueue.Sample/Plugin.Maui.JobQueue.Sample.csp
 dotnet pack src/Plugin.Maui.JobQueue/Plugin.Maui.JobQueue.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.JobQueue.1.0.0.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.JobQueue.1.0.8.nupkg`.
 
 ## License
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.8
+
+- Align the documented pack artifact version with the library version
+- Re-validate enqueue, retry, dead letter, DrainAsync, and SQLite persist (18 tests)
+
 ## 1.0.3
 
 - Rebrand package metadata and catalog references to MauiEssentials.
